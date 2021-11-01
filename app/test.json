@@ -1,0 +1,55 @@
+DEL     book:a_like
+ZADD    book:a_like 1 '"book:article:1"' 2 '"book:article:2"'
+DEL     book:a_time
+ZADD    book:a_time 1634005594213 '"book:article:1"' 1634005906889 '"book:article:2"'
+SET     book:a_type '[
+  {
+    
+    "uid":  1,
+    
+    "name":  "环保知识"
+  
+  },
+  
+  {
+    
+    "uid":  2,
+    
+    "name":  "绿色生活"
+  
+  }
+
+]'
+SET     book:a_type:1 '["book:article:1","book:article:2"]'
+DEL     book:a_view
+ZADD    book:a_view 1 '"book:article:1"' 7 '"book:article:2"'
+SET     book:article: 2
+SET     book:article:1 '{"title":"测试文字4","writer":"lll","text":"这是一篇测试文字4，用于测试。","type":1,"tag":["js","node"],"show":1,"time":1634005594213,"a_id":1}'
+SET     book:article:2 '{"title":"测试文字5","writer":"lll","text":"这是一篇测试文字5，用于测试。","type":1,"tag":["express","node"],"show":1,"time":1634005906889,"a_id":2}'
+SET     book:footer '[
+  {
+    "name": "版权所有",
+    "src": "http://localhost",
+    "text": "jiahuan"
+  },
+  {
+    "name": "发送邮件",
+    "src": "mailto:xxx@163.com",
+    "text": "163邮箱"
+  }
+]'
+SET     book:indexPic '[{"title":"绿色地球","src":"http://www.baidu.com","img":"http://47.242.50.250:3000/images/hb1.jpeg"},
+{"title":"绿色生活","src":"http://www.baidu.com","img":"http://47.242.50.250:3000/images/hb2.jpeg"},
+{"title":"绿色出行","src":"http://www.baidu.com","img":"http://47.242.50.250:3000/images/hb3.jpeg"}
+]'
+SET     book:nav_menu '[{"name":"主页","src":"/"},{"name":"文章","src":"article/list"}]'
+SET     book:tag:32981a13284db7a021131df49e6cd203 '["book:article:1"]'
+SET     book:tag:36c4536996ca5615dcf9911f068786dc '["book:article:1","book:article:2"]'
+SET     book:tag:4ca65a8bdbeae8b6ee400801a8a8f812 '["book:article:2"]'
+SET     book:user:info:wjh '{"username":"wjh","password":"hhh","phone":"147258369","nickname":"wjh","age":"13","sex":"female","ip":"::1","login":0}'
+SET     'book:user:info:王佳欢' '{"username":"王佳欢","password":"hhh","phone":"15946824862","nickname":"wjh","age":"13","sex":"female","ip":"::1","login":0}'
+SET     book:user:wjh:collection '[{"time":1635217100968,"a_id":1,"title":"测试文字4"}]'
+SET     hello 'hello world'
+SET     jiahuan 'this is a test!'
+SET     peng jinbin
+SET     yang 111
